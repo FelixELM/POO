@@ -1,2 +1,5 @@
 # POO
-Actividades del curso
+Curso  POO
+
+# Actividades  del curso 
+
