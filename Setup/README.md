@@ -54,12 +54,12 @@ Selecionamos  los componenetes que necestimos.
 
 Selecionamos la opcion de :
 
-![alt text](https://github.com/FelixELM/POO/blob/master/Setup/Imagenes/git4.PNG)al
+![alt text](https://github.com/FelixELM/POO/blob/master/Setup/Imagenes/git4.PNG)
 
 Paso 2: Conectar a github y VSC.
 Clonamos nuestro repositor.
 
-![alt text](https://github.com/FelixELM/POO/blob/master/Setup/Imagenes/git15.PNG)
+![alt text](https://github.com/FelixELM/POO/blob/master/Setup/Imagenes/git5.PNG)
 
 Abrimos VSC, y  seleccionamos la opcion de ver  en  paletas de comandos,  a  la cual seleccionaremos Git: clone ,  pegamos la ruta de nuestro repositorio  y  seleccionamos la carpeta para guardar nuestro codigo.
 
