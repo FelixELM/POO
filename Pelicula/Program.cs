@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Pelicula
 {
@@ -6,11 +7,28 @@ namespace Pelicula
     {
         static void Main(string[] args)
         {
-            Pelicula p1 = new Pelicula("Spiderverse", "Estados Unidos", "Phil Lord y Rodney Rothman", "Peter Ramsey, Rodney Rothman y Bob Persichetti", 2018) ;          
+            Pelicula p1 = new Pelicula();
+            p1.SetTitulo("Spiderverse");
+            p1.SetAño(2018);
+            /*p1.AgregarActor(new Actor("Jake Johnson", 1978));
+			p1.AgregarActor(new Actor("Hailee Steinfeld", 1996));*/
             p1.imprime();
 
-            Pelicula p2 = new Pelicula();
+            Pelicula p2 = new Pelicula();           
             p2.imprime();
+
+            List<Pelicula> peliculas = new List<Pelicula>();          
+            peliculas.Add(new Pelicula ("Venom", 2018));
+            peliculas.Add(new Pelicula ("Spider-man: Homecoming", 2017));
+            peliculas.Add(new Pelicula ("Spider-man: Far for home", 2019));
+            peliculas.Add(new Pelicula ("The Amazing Spiderman", 2012));
+            peliculas.Add(new Pelicula ("The Amazing Spiderman 2: Rise of electro",2014));
+            
+            foreach(Pelicula p in peliculas)
+            {
+                p.imprime();
+            }
+
 
         }
     }
@@ -22,6 +40,7 @@ namespace Pelicula
         private string autor;
         private string director;
         private Int16 año;
+        /*private List<Actor> actores = new List<Actor>();*/
 
         public void SetTitulo(string t)
         {
@@ -75,26 +94,43 @@ namespace Pelicula
         
         public void imprime()
         {
-            Console.WriteLine("Titulo:{0}\n\r Pais:{1}\n\r Autor:{2}\n\r Director:{3}\n\r Año:{4}", titulo, pais, autor, director, año);
+            Console.WriteLine("Titulo:{0}\n\r Año:{1}", this.titulo, this.año);
         }   
 
-        public Pelicula(string t, string p, string a, string d, Int16 ñ)
-        {     
+        public Pelicula(string t, Int16 ñ)
+        {
             this.titulo = t;
-            this.pais = p;
-            this.autor = a;
-            this.director = d;
             this.año = ñ;
-        }  
+        }       
 
         public Pelicula()
         {
-            titulo = "Coco";
-            pais = "Estados Unidos";
-            autor = "Adrian Molina y Matthew Aldrich";
-            director = "Lee Unkrich";
-            año = 2017;
-        }   
+            this.titulo = "coco";
+            this.año = 2017;
+        }
+        /*public void AgregarActor(Actor actor) 
+        {
+			actores.Add(actor);
+		}
+		public void ImprimeActores() 
+        {
+            Console.WriteLine("Actores:");
+			foreach(Actor actor in actores)
+			Console.WriteLine("{0} ({1})", actor.Nombre, actor.AñoNacimiento);
+		}*/
+        
     }
+
+    /*class Actor
+    {
+        public string Nombre;
+        public Int16 AñoNacimiento;
+
+        public Actor(string Nombre, Int16 AñoNacimiento)
+        {
+            this.Nombre = Nombre;
+            this.AñoNacimiento = AñoNacimiento;
+        }      
+    }*/
     
 }
