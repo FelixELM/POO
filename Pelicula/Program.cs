@@ -10,12 +10,13 @@ namespace Pelicula
             Pelicula p1 = new Pelicula();
             p1.SetTitulo("Spiderverse");
             p1.SetAño(2018);
-            /*p1.AgregarActor(new Actor("Jake Johnson", 1978));
-			p1.AgregarActor(new Actor("Hailee Steinfeld", 1996));*/
-            p1.imprime();
+            p1.AgregarActor(new Actor("Jake Johnson", 1978));
+			p1.AgregarActor(new Actor("Hailee Steinfeld", 1996));
+            p1.Imprime();
+            p1.ImprimeActores();
 
             Pelicula p2 = new Pelicula();           
-            p2.imprime();
+            p2.Imprime();
 
             List<Pelicula> peliculas = new List<Pelicula>();          
             peliculas.Add(new Pelicula ("Venom", 2018));
@@ -26,7 +27,7 @@ namespace Pelicula
             
             foreach(Pelicula p in peliculas)
             {
-                p.imprime();
+                p.Imprime();
             }
 
 
@@ -40,7 +41,7 @@ namespace Pelicula
         private string autor;
         private string director;
         private Int16 año;
-        /*private List<Actor> actores = new List<Actor>();*/
+        private List<Actor> actores = new List<Actor>();
 
         public void SetTitulo(string t)
         {
@@ -92,7 +93,7 @@ namespace Pelicula
             return año;
         }
         
-        public void imprime()
+        public void Imprime()
         {
             Console.WriteLine("Titulo:{0}\n\r Año:{1}", this.titulo, this.año);
         }   
@@ -108,20 +109,20 @@ namespace Pelicula
             this.titulo = "coco";
             this.año = 2017;
         }
-        /*public void AgregarActor(Actor actor) 
+        public void AgregarActor(Actor actor) 
         {
 			actores.Add(actor);
 		}
-		public void ImprimeActores() 
+        public void ImprimeActores() 
         {
-            Console.WriteLine("Actores:");
-			foreach(Actor actor in actores)
-			Console.WriteLine("{0} ({1})", actor.Nombre, actor.AñoNacimiento);
-		}*/
+			Console.WriteLine("Actores:");
+            foreach(Actor actor in actores)               
+			    Console.WriteLine("{0} ({1})", actor.Nombre, actor.AñoNacimiento);
+		}
         
     }
 
-    /*class Actor
+    class Actor
     {
         public string Nombre;
         public Int16 AñoNacimiento;
@@ -131,6 +132,6 @@ namespace Pelicula
             this.Nombre = Nombre;
             this.AñoNacimiento = AñoNacimiento;
         }      
-    }*/
+    }
     
 }
