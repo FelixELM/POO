@@ -13,3 +13,5 @@
 
  5)[Actores.](https://github.com/FelixELM/POO/tree/master/Pelicula)
 
+ 6)[Paso de parámetros.](https://github.com/FelixELM/POO/tree/master/Parametros)
+
