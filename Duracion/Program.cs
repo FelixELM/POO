@@ -38,7 +38,7 @@ namespace Duracion
         {
             int totalminutos;
             totalminutos = (horas * 60) + minutos;
-            Console.WriteLine("Minutos totales:{0}", totalminutos);
+            Console.WriteLine("Minutos totales:{0}\r\n", totalminutos);
         }
     }
     class Program
@@ -61,6 +61,7 @@ namespace Duracion
             c.print();
             c.Segundos();
             c.Minutos();
+            
 
             d.print();
         }
