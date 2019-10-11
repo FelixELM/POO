@@ -15,9 +15,16 @@ namespace Duracion
             segundos = s;
         }
 
+        public Duracion(int s)
+        {
+             horas = (int) s/3600;
+             minutos = (int) (s-(horas*3600))/60;
+             segundos = (int) (s-(horas*3600))-(minutos*60);
+        }
+
         public void print()
         {
-            Console.WriteLine("Horas:{0} Minutos:{1} Segundo:{2}", horas, minutos, segundos);
+            Console.WriteLine("{0}:{1}:{2}", horas, minutos, segundos);
         }
 
         public void Segundos()
@@ -38,11 +45,24 @@ namespace Duracion
     {
         static void Main(string[] args)
         {
-            Duracion d = new Duracion(2,45,15);
-            d.print();
-            d.Segundos();
-            d.Minutos();
+            Duracion a = new Duracion(2,15,12);
+            Duracion b = new Duracion(0,2,15);
+            Duracion c = new Duracion(2,0,10);
+            Duracion d = new Duracion(7210);
 
+            a.print();
+            a.Segundos();
+            a.Minutos();
+
+            b.print();
+            b.Segundos();
+            b.Minutos();
+
+            c.print();
+            c.Segundos();
+            c.Minutos();
+
+            d.print();
         }
     }
 }
