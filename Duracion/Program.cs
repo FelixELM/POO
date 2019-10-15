@@ -15,6 +15,11 @@ namespace Duracion
             segundos = s;
         }
 
+        public Duracion()
+        {
+
+        }
+
         public Duracion(int s)
         {
              horas = (int) s/3600;
@@ -40,6 +45,22 @@ namespace Duracion
             totalminutos = (horas * 60) + minutos;
             Console.WriteLine("Minutos totales:{0}\r\n", totalminutos);
         }
+
+        public static Duracion operator +(Duracion a, Duracion b)
+        {
+            int suma=0;
+
+            suma += (a.horas+b.horas)*3600;
+            suma += (a.minutos+b.minutos)*60;
+            suma += a.segundos+b.segundos;
+
+            return new Duracion(suma);        
+        }
+        
+        /*public override string ToString()
+        {
+            return String.Format("{0}:{1}:{2}", horas, minutos, segundos);
+        }*/
     }
     class Program
     {
@@ -49,7 +70,7 @@ namespace Duracion
             Duracion b = new Duracion(0,2,15);
             Duracion c = new Duracion(2,0,10);
             Duracion d = new Duracion(7210);
-
+            Duracion e;
             a.print();
             a.Segundos();
             a.Minutos();
@@ -62,8 +83,11 @@ namespace Duracion
             c.Segundos();
             c.Minutos();
             
-
             d.print();
+
+            e = a+b;
+            e.print();
+            //Console.WriteLine(a+b);
         }
     }
 }
