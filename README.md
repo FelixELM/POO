@@ -16,5 +16,5 @@
  6)[Paso de parámetros.](https://github.com/FelixELM/POO/tree/master/Parametros/Program.cs)
  
  7)[Stack.](https://github.com/FelixELM/POO/tree/master/Stacks/Program.cs)
- ss
+ 
  8)[Cola.](https://github.com/FelixELM/POO/tree/master/Cola/Program.cs)
